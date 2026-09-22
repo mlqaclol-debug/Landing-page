@@ -214,6 +214,47 @@
     0%,100%{ box-shadow:0 6px 18px rgba(46,158,99,0.35); }
     50%{ box-shadow:0 6px 22px rgba(46,158,99,0.6); }
   }
+
+  /* CENÁRIOS E CONDIÇÕES */
+  .scenario{background:var(--charcoal); color:var(--cream);}
+  .scenario .kicker{color:var(--rose-soft);}
+  .scenario .sect-head{max-width:760px;}
+  .scenario .sect-head h2{font-size:clamp(2rem,4vw,3rem);}
+  .scenario .sect-head p{color:rgba(239,234,225,.76);}
+  .scenario-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid rgba(239,234,225,.18);}
+  .scenario-card{padding:28px;border-right:1px solid rgba(239,234,225,.18);}
+  .scenario-card:last-child{border-right:0;}
+  .scenario-card .tag,.payment-card .tag{font-size:.75rem;letter-spacing:.12em;font-weight:700;color:var(--rose-soft);margin-bottom:12px;}
+  .scenario-card h3{font-size:1.3rem;margin-bottom:10px;}
+  .scenario-card p{font-size:.92rem;color:rgba(239,234,225,.72);}
+  .scenario-bottom{display:flex;justify-content:space-between;gap:24px;align-items:center;margin-top:28px;padding-top:24px;border-top:1px solid rgba(239,234,225,.18);}
+  .scenario-bottom p{color:rgba(239,234,225,.72);font-size:.9rem;}
+  .scenario-note{margin-top:18px;font-size:.75rem;color:rgba(239,234,225,.48);}
+
+  .payments{background:var(--cream);}
+  .payments-intro{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:end;margin-bottom:34px;}
+  .payments-intro h2{font-size:clamp(2rem,4vw,3rem);line-height:1.08;}
+  .payments-intro p{color:var(--ink-soft);}
+  .payment-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .payment-card{background:#fff;border:1px solid var(--line);padding:28px;}
+  .payment-card.featured{background:var(--charcoal);color:var(--cream);}
+  .payment-card .tag{color:var(--rose-dark);}
+  .payment-card.featured .tag{color:var(--rose-soft);}
+  .payment-card h3{font-size:1.45rem;line-height:1.2;margin-bottom:22px;}
+  .pay-row{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid var(--line);font-size:.9rem;}
+  .pay-row strong{text-align:right;}
+  .payment-card.featured .pay-row{border-color:rgba(239,234,225,.18);}
+  .pay-desc{margin-top:18px;font-size:.85rem;color:var(--ink-soft);}
+  .payment-card.featured .pay-desc{color:rgba(239,234,225,.7);}
+  .payment-disclaimer{margin-top:22px;font-size:.76rem;color:var(--ink-soft);}
+
+  @media(max-width:860px){
+    .scenario-grid,.payment-grid,.payments-intro{grid-template-columns:1fr;}
+    .scenario-card{border-right:0;border-bottom:1px solid rgba(239,234,225,.18);}
+    .scenario-card:last-child{border-bottom:0;}
+    .scenario-bottom{align-items:flex-start;flex-direction:column;}
+  }
+
 </style>
 </head>
 <body>
@@ -257,7 +298,7 @@
     <div class="sect-head">
       <div class="kicker">Localização</div>
       <h2>Rua Imbé, 75 — Bairro Caiçaras, Belo Horizonte.</h2>
-      <p>A um quarteirão do Shopping Del Rey e da Avenida Presidente Carlos Luz, com o Anel Rodoviário e a Av. Dom Pedro II por perto.</p>
+      <p>Próximo ao Shopping Del Rey e à Avenida Presidente Carlos Luz, com fácil acesso ao Anel Rodoviário e à Av. Dom Pedro II.</p>
     </div>
 
     <div class="loc-grid">
@@ -357,6 +398,86 @@
       </div>
     </div>
     <p class="plan-note">Também há opções de 2 quartos a partir de 55,87 m² e plantas adaptáveis. <a href="#lead">Peça o book completo de plantas no WhatsApp →</a></p>
+  </div>
+</section>
+
+
+<section class="sect scenario" id="possibilidades">
+  <div class="wrap">
+    <div class="sect-head">
+      <div class="kicker">Mais liberdade para o seu futuro</div>
+      <h2>Você organiza o presente enquanto constrói novas possibilidades.</h2>
+      <p>Durante a obra, você pode planejar o caixa com mais tranquilidade e chegar à entrega com diferentes caminhos para o imóvel.</p>
+    </div>
+
+    <div class="scenario-grid">
+      <div class="scenario-card">
+        <div class="tag">01 · GERAR RENDA</div>
+        <h3>Alugar e criar uma renda mensal</h3>
+        <p>A locação pode contribuir com a prestação e outros custos mensais, além de transformar o imóvel em uma fonte de renda.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="tag">02 · VALORIZAR</div>
+        <h3>Avaliar a venda após a entrega</h3>
+        <p>Se as condições de mercado forem favoráveis, você pode considerar a venda depois das chaves e aproveitar uma eventual valorização.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="tag">03 · MORAR</div>
+        <h3>Trocar aluguel por patrimônio</h3>
+        <p>Outra possibilidade é usar o imóvel para morar e direcionar o orçamento para a construção do seu próprio patrimônio.</p>
+      </div>
+    </div>
+
+    <div class="scenario-bottom">
+      <div>
+        <strong>O melhor caminho depende do seu caixa, prazo e objetivo.</strong>
+        <p>Eu preparo uma simulação do Casa Sigaud de acordo com o seu cenário.</p>
+      </div>
+      <a href="#lead" class="btn btn-rose">Quero analisar minhas possibilidades</a>
+    </div>
+    <div class="scenario-note">Valorização, renda e economia são possibilidades e não representam garantia de resultado.</div>
+  </div>
+</section>
+
+<section class="sect payments" id="condicoes">
+  <div class="wrap">
+    <div class="payments-intro">
+      <div>
+        <div class="kicker">Conheça as formas de pagamento</div>
+        <h2>Condições que podem se adaptar ao seu planejamento.</h2>
+      </div>
+      <p>Veja exemplos de composição de pagamento para entender como o Casa Sigaud pode se encaixar no seu momento. As condições precisam ser confirmadas no atendimento.</p>
+    </div>
+
+    <div class="payment-grid">
+      <div class="payment-card featured">
+        <div class="tag">01 · APOIO DA CAIXA</div>
+        <h3>Entrada durante a obra e saldo financiado</h3>
+        <div class="pay-row"><span>No ato</span><strong>R$ 10.000</strong></div>
+        <div class="pay-row"><span>Durante a obra</span><strong>42x de R$ 3.476,19</strong></div>
+        <div class="pay-row"><span>Após as chaves</span><strong>80% via Caixa</strong></div>
+        <p class="pay-desc">O saldo indicado fica para financiamento após a entrega, sujeito à análise e aprovação da instituição financeira.</p>
+      </div>
+
+      <div class="payment-card">
+        <div class="tag">02 · PLANO INVESTIDOR</div>
+        <h3>10% na assinatura + saldo durante a obra</h3>
+        <div class="pay-row"><span>Na assinatura</span><strong>R$ 78.000,00</strong></div>
+        <div class="pay-row"><span>Durante a obra</span><strong>18x de R$ 39.000,00</strong></div>
+        <p class="pay-desc">Prazo, disponibilidade e condições comerciais dependem de confirmação no momento da negociação.</p>
+      </div>
+
+      <div class="payment-card">
+        <div class="tag">03 · PLANO DIRETO</div>
+        <h3>10% + 30% + 60%</h3>
+        <div class="pay-row"><span>Na assinatura</span><strong>R$ 78.000,00</strong></div>
+        <div class="pay-row"><span>Durante 36 meses</span><strong>36x de R$ 6.500,00</strong></div>
+        <div class="pay-row"><span>Após as chaves</span><strong>60% em até 120x</strong></div>
+        <p class="pay-desc">Uma alternativa de distribuição do pagamento entre assinatura, período de obra e pós-entrega.</p>
+      </div>
+    </div>
+
+    <p class="payment-disclaimer">Simulação ilustrativa, sem seguros, taxas, encargos, juros de obra, tributos ou documentação. Não representa proposta. Valores e condições devem ser confirmados antes da contratação.</p>
   </div>
 </section>
 
